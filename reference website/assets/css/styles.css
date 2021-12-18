@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+@font-face {
+	font-family: "Lato" !important;
+	/*src: url(/assets/fonts/Lato-Regular.ttf) format("truetype") !important;*/
+}
+
+html {
+	position: relative;
+	color: #6c6f73;
+	font-family: "Lato";
+}
+body {
+	font-size: 18px;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	color: #6c6f73;
+	font-family: "Lato";
+}
+
+a {
+	/*color: #999999 !important;*/
+	color: #6c6f73 !important;
+}
+a:hover {
+	color:rgba(250,73,43,0.9) !important;
+	text-decoration: none !important;
+}
+
+.custom-container {
+	padding-top: 120px;
+}
+.container-no-padding {
+	padding-top: 120px;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+
+.margin-bottom-10 {
+	margin-bottom: 10px !important;
+}
+.margin-bottom-20 {
+	margin-bottom: 20px !important;
+}
+.margin-bottom-30 {
+	margin-bottom: 30px !important;
+}
+.margin-bottom-40 {
+	margin-bottom: 40px !important;
+}
+.margin-bottom-50 {
+	margin-bottom: 50px !important;
+}
+.margin-bottom-60 {
+	margin-bottom: 60px !important;
+}
+.margin-bottom-80 {
+	margin-bottom: 80px !important;
+}
+.margin-bottom-100 {
+	margin-bottom: 100px !important;
+}
+
+.margin-top-10 {
+	margin-top: 10px !important;
+}
+.margin-top-20 {
+	margin-top: 20px !important;
+}
+.margin-top-30 {
+	margin-top: 30px !important;
+}
+.margin-top-40 {
+	margin-top: 40px !important;
+}
+.margin-top-50 {
+	margin-top: 50px !important;
+}
+.margin-top-200 {
+	margin-top: 250px !important;
+}
+
+.text-ribbon {
+	position: relative;
+	/*top: 32vh;*/
+	/*top: 20vh;*/
+	top: 34vh;
+	left: 0px;
+	width: 100%;
+	color: #fff;
+	background-color: rgba(150,150,150,0.6);
+	overflow: hidden;
+	padding: 0px;
+ 	display: block;
+    overflow: hidden;
+    padding-left: 5px;
+	line-height: 60px;
+
+}
+.text-ribbon a {
+	color: #fff;
+}
+.h1-ribbon, .h2-ribbon, .h3-ribbon, .h4-ribbon {
+	display:inline-block; 
+	padding: 10px;
+	color: #fff;
+	background-color:  rgba(0,126,200,0.9);
+	overflow: hidden;
+}
+.h1-ribbon > small, .h2-ribbon > small, .h3-ribbon > small, .h4-ribbon > small {
+	color: rgba(255,255,255,0.7);
+}
+
+@media only screen and (max-width : 992px) {
+	.text-ribbon-mobile {
+		/*left: 0px;*/
+		/*top: 66vh !important*/
+		font-size: 30px !important;
+	}
+}
+@media only screen and (max-width : 768px) {
+	.text-ribbon-mobile {
+		/*left: 0px;*/
+		/*top: 50vh !important*/
+		top: 31vh !important;
+		font-size: 26px !important;
+	}
+}
+@media only screen and (max-width : 480px) {
+	.text-ribbon-mobile {
+		/*left: 0px;*/
+		/*top: 48vh !important;*/
+		font-size: 24px !important;
+	}
+}
+
+
+/* screen height hack - jon */
+@media only screen and (max-height : 1100px) {
+	.text-ribbon, .text-ribbon-mobile {
+		top: 31vh !important
+	}
+}
+@media only screen and (max-height : 1000px) {
+	.text-ribbon, .text-ribbon-mobile {
+		top: 25vh !important
+	}
+}
+@media only screen and (max-height : 600px) {
+	.text-ribbon, .text-ribbon-mobile {
+		top: 20vh !important
+	}
+}
+
+
+.lead-white {
+	color: #ffffff !important;
+}
+
+.more-button-ico {
+	margin-left: 5px;
+}
+
+.neutral-link {
+	color: #6c6f73 !important;
+}
+.neutral-link:hover {
+	color: #AAAAAA !important;
+	text-decoration: none;
+}
+
+
+
+.lead {
+	/*font-size: 21px !important;*/
+}
+.lead-small {
+	font-size: 18px !important;
+	margin-bottom: 5px !important;
+}
+
+.custom-fa-icon {
+	width: 20px;
+	padding-right: 5px;
+}
+
+.img-stretch {
+	max-height: 100% !important;
+	max-width: 100% !important;
+}
+
+@media only screen and (max-width : 992px) {
+	.img-stretch {
+		max-width: 40% !important;
+	}
+}
+
+@media only screen and (max-width : 992px) {
+	.organizer-container {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+}
+
+
+.comittee-container {
+	text-align: center !important;
+}
+@media only screen and (max-width : 992px) {
+	.comittee-container {
+		text-align: left !important;
+	}
+}
+
+
+
+
+.vertical-align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+.img-user {
+	opacity: 0.4;
+}
+
+
+.time-cell {
+	width: 90px !important;
+}

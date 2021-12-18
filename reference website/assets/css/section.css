@@ -1,0 +1,96 @@
+/* #fa492b */
+
+.section-header {
+    background-image: url('../images/confetti.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+.section-header-projects {
+    background-image: url('../images/confetti.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 45vh;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color:rgba(250,73,43,0.1);
+}
+
+/*CSS grid that contians all people*/
+#people-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(200px, 2fr));
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  grid-gap: 50px;
+}
+
+/*CSS grid that contains all projects*/
+#projects-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(300px, 2fr));
+  grid-template-rows: 1fr;
+  justify-items: center;
+  grid-gap: 60px;
+}
+
+@media only screen and (max-width : 992px) {
+  .section-header {
+    background-image: url('../images/confetti.jpg');
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /*min-height: 400px;*/
+}
+
+.linked-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-color {
+  background-color: rgba(250,73,43,0.9);
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+}
+.section-grey {
+  background-color: #F4F5F6;
+}
+.section-light-grey {
+  background-color: #F4F5F6;
+}
+.section-footer-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.section-border-top {
+	border-top: 1px solid #F4F5F6;
+}
+.section-border-bottom {
+	border-bottom: 1px solid #F4F5F6;
+}
+
+.section-header-h1 {
+  /*font-size: 32 !important;*/
+  margin-bottom: 20px;
+}
+.section-header-h2 {
+  margin-bottom: 20px;
+}
+.section-header-h3 {
+  margin-bottom: 10px;
+}
+.section-header-h4 {
+  margin-bottom: 10px;
+}
