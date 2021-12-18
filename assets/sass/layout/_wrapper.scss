@@ -1,0 +1,55 @@
+///
+/// Vortex by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Wrapper */
+
+	#wrapper {
+		width: 80rem;
+		max-width: calc(100% - 7rem);
+		margin: 0 auto;
+		padding: 6rem 0;
+
+		> * {
+			margin: 3.5rem 0 0 0;
+			box-shadow: 0 1rem 4rem 0.125rem _palette(bg-shadow);
+		}
+
+		> :first-child {
+			margin-top: 0;
+		}
+
+		@include breakpoint('<=xlarge') {
+			padding: 3.5rem 0;
+		}
+
+		@include breakpoint('<=large') {
+			max-width: calc(100% - 5rem);
+			padding: 2.5rem 0;
+
+			> * {
+				margin: 2.5rem 0 0 0;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			max-width: calc(100% - 4rem);
+			padding: 2rem 0;
+
+			> * {
+				margin: 2rem 0 0 0;
+			}
+		}
+
+		@include breakpoint('<=xsmall') {
+			max-width: 100%;
+			padding: 0;
+
+			> * {
+				margin: 1.5rem 0 0 0;
+				box-shadow: none;
+			}
+		}
+	}

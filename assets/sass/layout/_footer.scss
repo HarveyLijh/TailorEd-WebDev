@@ -1,0 +1,21 @@
+///
+/// Vortex by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Footer */
+
+	#footer {
+		color: _palette(fg-light);
+		margin: -2rem 0 6rem 0;
+		text-align: center;
+
+		@include breakpoint('<=xlarge') {
+			margin: 0 0 3.5rem 0;
+		}
+
+		@include breakpoint('<=xsmall') {
+			margin: 2rem 0;
+		}
+	}

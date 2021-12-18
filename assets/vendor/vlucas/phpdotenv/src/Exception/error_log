@@ -1,0 +1,4 @@
+[22-Apr-2021 07:00:46 America/New_York] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home/tailhaea/public_html/assets/vendor/vlucas/phpdotenv/src/Exception/InvalidEncodingException.php on line 9
+[22-Apr-2021 07:01:07 America/New_York] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home/tailhaea/public_html/assets/vendor/vlucas/phpdotenv/src/Exception/InvalidFileException.php on line 9
+[22-Apr-2021 07:01:50 America/New_York] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home/tailhaea/public_html/assets/vendor/vlucas/phpdotenv/src/Exception/InvalidPathException.php on line 9
+[22-Apr-2021 07:02:16 America/New_York] PHP Fatal error:  Interface 'Dotenv\Exception\ExceptionInterface' not found in /home/tailhaea/public_html/assets/vendor/vlucas/phpdotenv/src/Exception/ValidationException.php on line 9

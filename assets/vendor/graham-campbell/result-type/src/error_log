@@ -1,0 +1,2 @@
+[21-Apr-2021 20:58:47 America/New_York] PHP Fatal error:  Class 'GrahamCampbell\ResultType\Result' not found in /home/tailhaea/public_html/assets/vendor/graham-campbell/result-type/src/Error.php on line 24
+[21-Apr-2021 20:58:55 America/New_York] PHP Fatal error:  Class 'GrahamCampbell\ResultType\Result' not found in /home/tailhaea/public_html/assets/vendor/graham-campbell/result-type/src/Success.php on line 24

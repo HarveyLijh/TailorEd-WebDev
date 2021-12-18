@@ -1,0 +1,125 @@
+///
+/// Vortex by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		position: relative;
+		border-bottom: none;
+
+		> .label {
+			display: none;
+		}
+
+		&.alt {
+			&:before {
+				@include vendor('transition', (
+					'color #{_duration(transition)} ease-in-out',
+					'background-color #{_duration(transition)} ease-in-out',
+					'box-shadow #{_duration(transition)} ease-in-out'
+				));
+
+				display: inline-block;
+				width: 3.5rem;
+				height: 3.5rem;
+				line-height: 3.5rem;
+				border-radius: 3.5rem;
+				text-align: center;
+			}
+		}
+
+		&.major {
+			display: block;
+			margin: 0 0 (_size(element-margin) * 0.625) 0;
+
+			&:before {
+				display: inline-block;
+				width: 4rem;
+				height: 4rem;
+				line-height: 4rem;
+				border-radius: 4rem;
+				font-size: 1.325rem;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			&.alt {
+				&:before {
+					width: 3rem;
+					height: 3rem;
+					line-height: 3rem;
+					border-radius: 3rem;
+				}
+			}
+		}
+	}
+
+	span.icon {
+		&:before {
+			cursor: default;
+		}
+	}
+
+	@mixin color-icon($p: null) {
+		.icon {
+			&.accent1 {
+				color: _palette($p, accent1);
+			}
+
+			&.accent2 {
+				color: _palette($p, accent2);
+			}
+
+			&.accent3 {
+				color: _palette($p, accent3);
+			}
+
+			&.accent4 {
+				color: _palette($p, accent4);
+			}
+
+			&.accent5 {
+				color: _palette($p, accent5);
+			}
+
+			&.alt {
+				&:before {
+					box-shadow: inset 0 0 0 1px _palette($p, border);
+				}
+			}
+
+			&.major {
+				&:before {
+					box-shadow: inset 0 0 0 1px _palette($p, border);
+				}
+			}
+		}
+
+		a.icon {
+			&.alt {
+				&:hover {
+					color: _palette($p, highlight);
+
+					&:before {
+						background-color: transparentize(_palette($p, highlight), 0.9);
+						box-shadow: inset 0 0 0 1px _palette($p, highlight);
+					}
+				}
+
+				&:active {
+					color: _palette($p, highlight);
+
+					&:before {
+						background-color: transparentize(_palette($p, highlight), 0.65);
+						box-shadow: inset 0 0 0 1px _palette($p, highlight);
+					}
+				}
+			}
+		}
+	}
+
+	@include color-icon;

@@ -1,0 +1,167 @@
+///
+/// Vortex by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		@include vendor('appearance', 'none');
+		@include vendor('transition', (
+			'background-color #{_duration(transition)} ease-in-out',
+			'box-shadow #{_duration(transition)} ease-in-out',
+			'color #{_duration(transition)} ease-in-out'
+		));
+		background-color: transparent;
+		border-radius: 3rem;
+		border: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: _font(weight-bold);
+		height: 3rem;
+		line-height: calc(3rem - 1px);
+		padding: 0 2rem;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+
+		&:before {
+			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+		}
+
+		&.icon {
+			&:before {
+				margin-right: 0.75rem;
+			}
+		}
+
+		&.next {
+			@include icon;
+
+			&:before {
+				content: '\f178';
+				float: right;
+				line-height: inherit;
+				margin-left: 0.75rem;
+			}
+		}
+
+		&.fit {
+			width: 100%;
+		}
+
+		&.small {
+			font-size: 0.9rem;
+			height: 2.625rem;
+			line-height: calc(2.625rem - 1px);
+			padding: 0 1.5rem;
+
+			&.next {
+				&:before {
+					margin-left: 0.5rem;
+				}
+			}
+		}
+
+		&.large {
+			font-size: 1.125rem;
+			height: 3.5rem;
+			line-height: calc(3.5rem - 1px);
+			padding: 0 2rem;
+			min-width: 8rem;
+		}
+
+		&.disabled,
+		&:disabled {
+			@include vendor('pointer-events', 'none');
+			opacity: 0.25;
+		}
+	}
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button {
+		line-height: calc(3rem - 2px);
+
+		&.small {
+			line-height: calc(2.625rem - 2px);
+		}
+	}
+
+	@mixin color-button($p: null) {
+		input[type="submit"],
+		input[type="reset"],
+		input[type="button"],
+		button,
+		.button {
+			$border: null;
+
+			@if ($p == 'invert') {
+				$border: _palette($p, fg-bold);
+			}
+			@else {
+				$border: _palette($p, border);
+			}
+
+			color: _palette($p, fg-bold) !important;
+			box-shadow: inset 0 0 0 3px $border;
+
+			&.icon {
+				&:before {
+					color: $border;
+				}
+			}
+
+			&.next {
+				&:before {
+					color: $border;
+				}
+			}
+
+			&:hover {
+				background-color: transparentize(_palette($p, highlight), 0.9);
+				box-shadow: inset 0 0 0 3px _palette($p, highlight);
+				color: _palette($p, highlight) !important;
+
+				&:before {
+					color: inherit;
+				}
+			}
+
+			&:active {
+				background-color: transparentize(_palette($p, highlight), 0.65);
+				box-shadow: inset 0 0 0 3px _palette($p, highlight);
+				color: _palette($p, highlight) !important;
+
+				&:before {
+					color: inherit;
+				}
+			}
+
+			&.primary {
+				box-shadow: none;
+				background-color: _palette($p, highlight);
+				color: _palette($p, bg) !important;
+
+				&:before {
+					color: transparentize(_palette($p, bg), 0.5);
+				}
+
+				&:hover {
+					background-color: saturate(lighten(_palette($p, highlight), 5), 15);
+				}
+
+				&:active {
+					background-color: saturate(darken(_palette($p, highlight), 5), 2);
+				}
+			}
+		}
+	}
+
+	@include color-button;

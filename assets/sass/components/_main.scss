@@ -1,0 +1,193 @@
+///
+/// Vortex by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Main */
+
+	.main {
+		position: relative;
+		background-color: _palette(bg);
+		overflow-x: hidden;
+
+		> * {
+			position: relative;
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+			max-width: 100%;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: -100vw;
+				width: 200vw;
+				height: 1px;
+				background: _palette(border);
+			}
+
+			&.small {
+				width: 48rem;
+			}
+
+			&.medium {
+				width: 60rem;
+			}
+		}
+
+		> :first-child {
+			&:before {
+				display: none;
+			}
+		}
+
+		> header {
+			@include padding(7rem, 6rem);
+			text-align: center;
+			margin: 0 auto;
+
+			> :first-child {
+				position: relative;
+				padding-bottom: 2rem;
+				margin-bottom: 3rem;
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					width: 20rem;
+					height: 3px;
+					margin-left: -10rem;
+					background-image: linear-gradient(90deg, #{_palette(accent1)}, #{_palette(accent4)});
+				}
+			}
+		}
+
+		> .image {
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 30rem;
+
+			&:before {
+				display: none;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		> .inner {
+			@include padding(6rem, 6rem);
+			margin-left: auto;
+			margin-right: auto;
+
+			&.special {
+				text-align: center;
+			}
+		}
+
+		> footer {
+			@include padding(3rem, 6rem);
+			text-align: center;
+		}
+
+		&.style1 {
+		}
+
+		&.style2 {
+			@include color(invert);
+			background-image: url('../../images/overlay.png'), linear-gradient(45deg, #{mix(_palette(accent5), _palette(accent1), 50)}, #{mix(_palette(accent5), _palette(accent4), 50)});
+
+			> * {
+				&:before {
+					background: _palette(invert, border);
+				}
+			}
+
+			> header {
+				> :first-child {
+					&:after {
+						background-image: linear-gradient(90deg, _palette(invert, accent1), _palette(invert, accent4));
+					}
+				}
+			}
+		}
+
+		@include breakpoint('<=large') {
+			> header {
+				@include padding(5rem, 3rem);
+			}
+
+			> .image {
+				height: 25rem;
+			}
+
+			> .inner {
+				@include padding(3rem, 3rem);
+			}
+
+			> footer {
+				@include padding(3rem, 3rem);
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			> * {
+				&.small {
+					width: 42rem;
+				}
+			}
+
+			> .image {
+				height: 22.5rem;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			> header {
+				@include padding(3rem, 2rem);
+
+				> :first-child {
+					padding-bottom: 1.5rem;
+					margin-bottom: 1.75rem;
+
+					&:after {
+						width: 10rem;
+						margin-left: -5rem;
+					}
+				}
+			}
+
+			> .image {
+				height: 15rem;
+			}
+
+			> .inner {
+				@include padding(2rem, 2rem);
+			}
+
+			> footer {
+				@include padding(2rem, 2rem);
+			}
+		}
+
+		@include breakpoint('<=xsmall') {
+			> header {
+				@include padding(3rem, 1.5rem);
+			}
+
+			> .inner {
+				@include padding(2rem, 1.5rem);
+			}
+
+			> footer {
+				@include padding(2rem, 1.5rem);
+			}
+		}
+	}

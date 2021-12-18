@@ -1,0 +1,76 @@
+///
+/// Vortex by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Posts */
+
+	.posts {
+		width: 100%;
+		margin: 0 0 _size(element-margin) 0;
+
+		article {
+			.image {
+				display: block;
+				width: 100%;
+				margin: 0 0 _size(element-margin) 0;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			> :last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include fixed-grid((
+			columns:			3,
+			gutters:			3rem,
+			horizontal-align:	center,
+			flush:				true
+		));
+
+		@include breakpoint('<=medium') {
+			@include vendor('justify-content', 'center');
+
+			@include fixed-grid-resize((
+				columns:		2,
+				gutters:		3rem,
+				flush:			true,
+				prev-columns:	3
+			));
+
+			article:nth-child(3n):last-child {
+				padding-right: 0;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			@include fixed-grid-resize((
+				columns:		2,
+				gutters:		2rem,
+				flush:			true,
+				prev-columns:	(3, 2)
+			));
+		}
+
+		@include breakpoint('<=xsmall') {
+			@include fixed-grid-resize((
+				columns:		1,
+				gutters:		3rem,
+				flush:			true,
+				prev-columns:	(3, 2)
+			));
+		}
+
+		@include breakpoint('<=xsmall') {
+			article {
+				.image {
+					max-width: 100%;
+				}
+			}
+		}
+	}

@@ -1,0 +1,106 @@
+///
+/// Vortex by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Features */
+
+	.features {
+		width: 100%;
+		margin: (_size(element-margin) * 1.25) 0;
+
+		@include fixed-grid((
+			columns:			3,
+			gutters:			8rem,
+			horizontal-align:	center,
+			flush:				false
+		));
+
+		> section {
+			border-style: solid;
+			border-left-width: 1px;
+			border-top-width: 1px;
+
+			> :last-child {
+				margin-bottom: 0;
+			}
+
+			&:nth-child(3n - 2) {
+				border-left-width: 0;
+			}
+
+			&:nth-child(-n + 3) {
+				border-top-width: 0;
+			}
+
+			h3 {
+				font-size: 1.25rem;
+				margin: 0 0 (_size(element-margin) * 0.325) 0;
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			@include fixed-grid-resize((
+				columns:		2,
+				gutters:		6rem,
+				flush:			false,
+				prev-columns:	3
+			));
+
+			> section {
+				&:nth-child(3n - 2) {
+					border-left-width: 1px;
+				}
+
+				&:nth-child(-n + 3) {
+					border-top-width: 1px;
+				}
+
+				&:nth-child(2n - 1) {
+					border-left-width: 0;
+				}
+
+				&:nth-child(-n + 2) {
+					border-top-width: 0;
+				}
+			}
+		}
+
+		@include breakpoint('<=xsmall') {
+			@include fixed-grid-resize((
+				columns:		1,
+				gutters:		6rem,
+				flush:			false,
+				prev-columns:	(3, 2)
+			));
+
+			> section {
+				&:nth-child(2n - 1) {
+					border-left-width: 1px;
+				}
+
+				&:nth-child(-n + 2) {
+					border-top-width: 1px;
+				}
+
+				&:nth-child(n) {
+					border-left-width: 0;
+				}
+
+				&:nth-child(-n + 1) {
+					border-top-width: 0;
+				}
+			}
+		}
+	}
+
+	@mixin color-features($p: null) {
+		.features {
+			> section {
+				border-color: _palette($p, border);
+			}
+		}
+	}
+
+	@include color-features;

@@ -1,0 +1,65 @@
+///
+/// Vortex by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Basic */
+
+	// MSIE: Required for IEMobile.
+		@-ms-viewport {
+			width: device-width;
+		}
+
+	// MSIE: Prevents scrollbar from overlapping content.
+		body {
+			-ms-overflow-style: scrollbar;
+		}
+
+	// Ensures page width is always >=320px.
+		@include breakpoint('<=xsmall') {
+			html, body {
+				min-width: 320px;
+			}
+		}
+
+	// Set box model to border-box.
+	// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+		html {
+			box-sizing: border-box;
+		}
+
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+	body {
+		background-color: 		_palette(bg-alt);
+		background-image:		url('../../images/overlay.png'),
+								svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100" preserveAspectRatio="none"><defs><radialGradient id="rg1" cx="0%" cy="0%" r="100%" fx="0%" fy="0%"><stop offset="0%" style="stop-color: #{_palette(accent1)}; stop-opacity: 0.5" /><stop offset="100%" style="stop-color: #{_palette(accent1)}; stop-opacity:0" /></radialGradient><radialGradient id="rg2" cx="100%" cy="0%" r="100%" fx="100%" fy="0%"><stop offset="0%" style="stop-color: #{_palette(accent4)}; stop-opacity: 0.5" /><stop offset="100%" style="stop-color: #{_palette(accent4)}; stop-opacity:0" /></radialGradient></defs><polygon points="0,0 125,0 125,100 0,100" style="fill: url(#rg1);" /><polygon points="75,0 200,0 200,100 75,100" style="fill: url(#rg2);" /></svg>'),
+								svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100" preserveAspectRatio="none"><defs><radialGradient id="rg1" cx="0%" cy="100%" r="100%" fx="0%" fy="100%"><stop offset="0%" style="stop-color: #{_palette(accent1)}; stop-opacity: 0.5" /><stop offset="100%" style="stop-color: #{_palette(accent1)}; stop-opacity:0" /></radialGradient><radialGradient id="rg2" cx="100%" cy="100%" r="100%" fx="100%" fy="100%"><stop offset="0%" style="stop-color: #{_palette(accent4)}; stop-opacity: 0.5" /><stop offset="100%" style="stop-color: #{_palette(accent4)}; stop-opacity:0" /></radialGradient></defs><polygon points="0,0 125,0 125,100 0,100" style="fill: url(#rg1);" /><polygon points="75,0 200,0 200,100 75,100" style="fill: url(#rg2);" /></svg>');
+		background-size:		auto,
+								100% 60rem,
+								100% 60rem;
+		background-position:	top left,
+								top left,
+								bottom left;
+		background-repeat:		repeat,
+								no-repeat,
+								no-repeat;
+
+		// Stops initial animations until page loads.
+			&.is-preload {
+				*, *:before, *:after {
+					@include vendor('animation', 'none !important');
+					@include vendor('transition', 'none !important');
+				}
+			}
+
+		@include breakpoint('<=xsmall') {
+			background-image:		url('../../images/overlay.png');
+			background-size:		auto;
+			background-position:	top left;
+			background-repeat:		repeat;
+		}
+	}

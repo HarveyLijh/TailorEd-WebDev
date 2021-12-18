@@ -1,0 +1,1 @@
+[22-Apr-2021 07:09:23 America/New_York] PHP Fatal error:  Interface 'Dotenv\Parser\ParserInterface' not found in /home/tailhaea/public_html/assets/vendor/vlucas/phpdotenv/src/Parser/Parser.php on line 12
