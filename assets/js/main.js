@@ -4,7 +4,6 @@
 		$header = $('#header'),
 		$body = $('body');
 	
-	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
 			large:    [ '981px',   '1280px' ],
@@ -14,7 +13,6 @@
 			xxsmall:  [ null,      '360px'  ]
 		});
 	
-	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
@@ -140,36 +138,6 @@
 			}); 
 		}
 	});
-	
-	// AJAX post request --- This DOESN'T really work yet, so umm we'll keep working on it
-	// $("input[type='radio']").click(function(){
-	// 	$('#results').empty();
-	// 	$.ajax({
-	// 		type:'POST',
-	// 		url:'ajaxResults.php',
-	// 		data: {
-	// 			disciplinary: $("#disciplinary").val(), 
-	// 			department: $("#department").val(), 
-	// 			course: $("#course").val(), 
-	// 
-	// 			sex: $(".category4:checked").val(), 
-	// 			fg: $(".category3:checked").val(), 
-	// 
-	// 			anyrace: $('#any-race:checked').val(),
-	// 			white: $('#race-option-2:checked').val(),
-	// 			asian: $('#race-option-3:checked').val(),
-	// 			black: $('#race-option-4:checked').val(),
-	// 			hispanic: $('#race-option-5:checked').val(),
-	// 
-	// 			lecture: $('input[name = lecture]').val(),
-	// 			discussion: $('input[name = discussion]').val(),
-	// 			groupwork: $('input[name = group-work]').val()
-	// 		},
-	// 		success:function(html){
-	// 			$('#results').html(html);
-	// 		}
-	// 	}); 
-	// });
 
 	// Form Validation
 	$('#submit').click(function() {
