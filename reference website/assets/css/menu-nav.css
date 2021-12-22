@@ -1,0 +1,138 @@
+
+/* SLIDEOUT MODULE STYLES */
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#menu.slideout-menu {
+  left: auto; 
+}
+
+.menu,
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 256px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.panel,
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+/* Animation
+---------------------------------- */
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+  }
+
+  50% {
+    -webkit-transform:translate3d(-10px, 0, 0);
+    transform:translate3d(-10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+  }
+
+  50% {
+    -webkit-transform:translate3d(-10px, 0, 0);
+    transform:translate3d(-10px, 0, 0);
+  }
+}
+
+.shake {
+  -webkit-animation-name:shake;
+  animation-name:shake;
+  -webkit-animation-duration:2s;
+  animation-duration:2s;
+  -webkit-animation-iteration-count: 4;
+  animation-iteration-count: 4;
+}
+
+
+/* MOBILE NAV MENU */
+.menu {
+  background-color: #1D1F20;
+  background-image: linear-gradient(145deg, #1D1F20, #404348);
+}
+
+a {
+  /*color: #4B5;*/
+  /*text-decoration: none;*/
+}
+
+.menu a {
+  /*color: #fff;*/
+}
+
+.menu a:hover {
+  /*text-decoration: underline;*/
+}
+
+.menu-header {
+  border-bottom: 1px solid #2a2d2f;
+  padding: 20px 0 20px 60px;
+  background: url('../assets/github.png/') no-repeat 15px 15px;
+  background-size: 32px;
+}
+
+.menu-header-title {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.menu-section {
+  margin: 25px 0;
+}
+
+.menu-section-title {
+  text-transform: uppercase;
+  color: #85888d;
+  font-weight: 200;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  margin:0;
+}
+
+.menu-section-list {
+  padding:0;
+  margin: 10px 0;
+  list-style:none;
+}
+
+.menu-section-list a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.menu-section-list a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
