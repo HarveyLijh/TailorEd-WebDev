@@ -1,7 +1,7 @@
 /* #fa492b */
 
 .section-header {
-    background-image: url('../images/confetti.jpg');
+    background-image: url('../images/banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,7 +9,7 @@
 }
 
 .section-header-projects {
-    background-image: url('../images/confetti.jpg');
+    background-image: url('../images/banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -42,7 +42,7 @@
 
 @media only screen and (max-width : 992px) {
   .section-header {
-    background-image: url('../images/confetti.jpg');
+    background-image: url('../images/banner.jpg');
   }
 }
 
