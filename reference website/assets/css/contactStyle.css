@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+.contact {
+    width: 100%;
+    background-color: #F4F5F6;
+}
+
+.form-container {
+    width: 95%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.section-header-h1 {
+    margin: 0;
+}
+
+@media (max-width: 1200px)  {
+    .form-container {
+        width: 80%;
+    }
+}
+.form-title {
+    text-align: center;
+}
+
+.form-title > h2 {
+    width: 25%;
+    text-align: center;
+    border-bottom: #000 solid 2px;
+    margin: 0.6em auto;
+    padding-bottom: 0.6em;
+}
+
+.form-title > p {
+    font-size: 1.2rem;
+}
+
+/* style --> form style */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-info .name, 
+.user-info .email {
+    width: 48%;
+    margin: 1em 0;
+    height: 30px;
+}
+
+::placeholder {
+    font-size: 1rem;
+}
+
+.form-container input, 
+.form-container textarea {
+    padding: 0.5em;
+    font-size: 1rem;
+}
+
+.user-message .text {
+    width: 100%;
+}
+
+.form-container textarea {
+    margin-bottom: 1em;
+}
+
+.form-container .btn-submit {
+    width: 20%;
+    font-size: 1.2rem;
+    border-style: none;
+    border: #000 solid 1px;
+    padding: 8px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.btn-submit:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+.submit-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
