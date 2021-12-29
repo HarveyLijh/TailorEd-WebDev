@@ -17,7 +17,7 @@
         <link href="assets/css/carousel.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/contactStyle.css">
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> -->
         <!-- for carousel -->
     </head>
     <style>
@@ -131,12 +131,14 @@
                     </p>
                 </div>
             </div>
+
+            <!-- About -->
             <div id="about" name="about" class="linked-section section-grey">
                 <div class="container">
                     <div class="row margin-bottom-10">
                         <div class="col-md-12">
                             <h1 class="section-header-h1">About</h1>
-                            <p>
+                            <p class="lead">
                                 The TailorEd Study looks at the relationships between
                                 <ul>
                                     <li>
@@ -152,7 +154,7 @@
                                 Its goal is to test the claims made in learning space design researchers that active learning formats (such as discussion and small group work) improve learning, especially for students marginalized in educational settings due to their gender, race, and other identity characteristics. 
 Faculty and students teaching/taking classes included receive an email notifying them of inclusion of their class in the study, which directs them to this webpage, that provides information about the study, explains where to direct questions, and informs about how to opt out of the study. There are also signs posted in all study classrooms notifying faculty and students that the classroom is part of the TailorEd Study.
 For frequently-asked questions about the study, see our
-                                <a href="#contact" class="page-scroll">
+                                <a href="#faq" class="page-scroll">
                                     <i>
                                         <b>
                                             <u>FAQ page</u>
@@ -172,12 +174,12 @@ For frequently-asked questions about the study, see our
                                     allowfullscreen="allowfullscreen"
                                 ></iframe>
                             </div>
-                            <p>
+                            <p class="lead">
                                 In this session we will present TailorEd: A custom image recognition neural network applied to imagery of select classroom environments coupled with student demographic and grade data in a study of the effects of pedagogical practices and classroom technologies on learning. We will start with the motivation behind this project and explain how we have gathered our data, guide the attendees through a human qualitative data coding practice via a hands on exercise, introduce our Classroom Configuration Identifier (CCID) image classifier neural network via a live demo, share our preliminary results and explain our data modeling procedure, demo our resulting web tool for educators, and end by delineating the project’s future steps.
                             </p>
                             <br>
                             <h3 class="section-header-h3">Study Procedures</h3>
-                            <p>
+                            <p class="lead">
                                 The study uses
                                 <a
                                     data-toggle="tooltip"
@@ -233,7 +235,7 @@ For frequently-asked questions about the study, see our
                                 </div>
                             </div>
                             <h3 class="section-header-h3">Confidentiality</h3>
-                            <p>
+                            <p class="lead">
                                 Reports/publications based on this study will focus on aggregate findings across all courses included in the study, not on individual courses, faculty, or students. Faculty will not be identified at all, and students/student information will be identified using a unique identifier (NOT their student ID#) generated for the purpose of this study only. There is some small risk of identifiability in the
                                 <a
                                     data-toggle="tooltip"
@@ -250,12 +252,12 @@ For frequently-asked questions about the study, see our
                                 </a>
                                 as sample photos illustrate, people who know the individuals depicted may be able to recognize them. To mitigate this, individuals included in classroom photographs will never be identified in any part of this study, limiting the risk of identifiability more broadly. The photos also depict a "public" event (class meetings), and therefore do not contain sensitive or compromising information.
                             </p>
-                            <p>
+                            <p class="lead">
                                 All records and research materials associated with this study will be kept in a secure location (password-protected computer/cloud backup). Only members of the research team will have access to project records and research materials.
                             </p>
                             <br>
                             <h3 class="section-header-h3">Participants' Rights</h3>
-                            <p>
+                            <p class="lead">
                                 Participation in this study is voluntary and won’t affect your employment or performance review  at Santa Clara University. You are free to opt out of the study at any time and to see research materials in which you are included (photos or reports on the study). If any member of the class (faculty or student) objects at any time to participating in the study, the course will be removed from the study and all data associated with that course will be permanently deleted.
                             </p>
                         </div>
@@ -526,36 +528,32 @@ For frequently-asked questions about the study, see our
                 </div>
             </div>
             <!-- contact -->
-
-            <div class="contact">
-                <div class="form-container">
-                    <h1 class="section-header-h1 margin-bottom-50">Contact</h1>
-                    <div class="form-title">
-                        <h2>GET IN TOUCH</h2>
-                        <p>If you would like to receive more information or need to contact us, please fill out the form below and we will try to get back to you as soon as possible.</p>
-                    </div>
-                    <form id="contact-form">
-                        <div class="user-info">
-                            <input type="hidden" name="contact_number">
-                            <input class="name" type="text" name="from_name" placeholder="Enter name" required>
-                            <input class="email" type="email" name="user_email" placeholder="Enter email address" required>
-                        </div>
-                        <div class="user-message">
-                            <textarea class="text" name="message" placeholder="Enter message" required></textarea>
-                        </div>
-                        <div class="submit-form">
-                            <input href="#home" class="btn-submit" type="submit" value="Send">
-                        </div>
-                    </form>
-                </div>
-            </div>
-
             <div id="contact" name="contact" class="linked-section section-grey">
                 <div class="container">
                     <div class="row margin-bottom-10">
                         <div class="col-md-12">
+                            <h1 class="section-header-h1">Contact</h1>
+                            <div class="form-container">
+                                <div class="form-title">
+                                    <h2>GET IN TOUCH</h2>
+                                    <p class="lead">If you would like to receive more information or need to contact us, please fill out the form below and we will try to get back to you as soon as possible.</p>
+                                </div>
+                                <form id="contact-form">
+                                    <div class="user-info">
+                                        <input type="hidden" name="contact_number">
+                                        <input class="name" type="text" name="from_name" placeholder="Enter name" required>
+                                        <input class="email" type="email" name="user_email" placeholder="Enter email address" required>
+                                    </div>
+                                    <div class="user-message">
+                                        <textarea class="text" name="message" placeholder="Enter message" required></textarea>
+                                    </div>
+                                    <div class="submit-form">
+                                        <input href="#home" class="btn-submit" type="submit" value="Send">
+                                    </div>
+                                </form>
+                            </div>
                             <h3 class="section-header-h3">Questions, Concerns, and Opting Out of the Study</h3>
-                            <p>
+                            <p class="lead">
                                 If you have questions, concerns, or complaints about this study, or if you wish to opt out, refer back to the email you received notifying you that a class you're taking/teaching is scheduled to be included in the TailorEd Study, titled "Classroom Study Notification". This email includes a personalized link allowing you to opt out of the study. If you cannot find that email, you can contact one of the investigators:
                                 <ul>
                                     <li>
@@ -590,9 +588,9 @@ For frequently-asked questions about the study, see our
                                     </li>
                                 </ul>
                             </p>
-                            <p>
+                            <p class="lead">
                                 Lastly, if you have questions about your rights as a participant in this study, or if you feel you have been placed at risk, contact the Chair of SCU's Human Subjects Committee through the Office of Research Compliance and Integrity at
-                                <a href="tel:408-554-5591">408-554-5591</a>
+                                <u><b><a href="tel:408-554-5591">408-554-5591</a></b></u>
                                 .
                             </p>
                         </div>

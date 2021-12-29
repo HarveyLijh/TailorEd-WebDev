@@ -2,23 +2,12 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 16px;
-}
-
-.contact {
-    width: 100%;
-    background-color: #F4F5F6;
-}
 
 .form-container {
     width: 95%;
     max-width: 1140px;
     margin: 0 auto;
     padding: 2em 0;
-}
-.section-header-h1 {
-    margin: 0;
 }
 
 @media (max-width: 1200px)  {
@@ -31,17 +20,14 @@ html {
 }
 
 .form-title > h2 {
-    width: 25%;
+    width: 300px;
+    white-space: nowrap;
     text-align: center;
     border-bottom: #000 solid 2px;
-    margin: 0.6em auto;
+    margin:auto;
+    margin-bottom: 0.6em;
     padding-bottom: 0.6em;
 }
-
-.form-title > p {
-    font-size: 1.2rem;
-}
-
 /* style --> form style */
 
 #contact-form {
@@ -63,13 +49,13 @@ html {
 }
 
 ::placeholder {
-    font-size: 1.12rem;
+    font-size: 18px;
 }
 
 .form-container input, 
 .form-container textarea {
     padding: 1em;
-    font-size: 1.12rem;
+    font-size: 18px;
     border-style: none;
     border-radius: 10px;
 }
@@ -84,10 +70,11 @@ html {
 
 .form-container .btn-submit {
     width: 20%;
-    font-size: 1.2rem;
+    height: 10%;
+    font-size: 20px;
+    padding: .4em;
     border-style: none;
     border: #7a7d86 solid 1px;
-    padding: 8px 24px;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.5s;
