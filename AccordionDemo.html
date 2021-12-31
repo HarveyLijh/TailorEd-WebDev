@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>jQuery Accordion</title>
+  </head>
+  <body>
+    <h2>Accordion Group <br><small>(single open)</small></h2>
+    <section id="only-one" data-accordion-group>
+      <section data-accordion>
+        <button data-control>Accordion 1</button>
+        <div data-content>
+          <article>Item</article>
+          <article data-accordion>
+            <button data-control>2nd Level</button>
+            <div data-content>
+              <article>Item</article>
+              <article>Hoodie ennui Godard aesthetic, art party whatever trust fund slow-carb kogi tattooed single-origin coffee banjo. Deep v tote bag brunch, artisan distillery chillwave Williamsburg sartorial. Mustache blog wayfarers Carles, forage biodiesel butcher street art. Hashtag small batch bitters deep v gluten-free. Semiotics butcher blog, paleo asymmetrical narwhal selvage pug Pitchfork DIY artisan Wes Anderson put a bird on it drinking vinegar whatever. Artisan McSweeney's Shoreditch, wolf yr Marfa street art locavore craft beer aesthetic 90's gentrify. Yr hella fingerstache, Echo Park VHS +1 church-key XOXO Vice selvage gastropub readymade literally wayfarers.</article>
+              <article>Item</article>
+              <article>Item</article>
+              <article>Item</article>
+              <article>Item</article>
+            </div>
+          </article>
+          <article data-accordion>
+            <button data-control>2nd Level</button>
+            <div data-content>
+              <article>Item</article>
+              <article>Item</article>
+              <article data-accordion>
+                <button data-control>3rd Level</button>
+                <div data-content>
+                  <article>Item</article>
+                  <article>Item</article>
+                  <article>Item</article>
+                  <article>Item</article>
+                  <article>Item</article>
+                  <article>Item</article>
+                </div>
+              </article>
+              <article data-accordion>
+                <button data-control>3rd Level</button>
+                <div data-content>
+                  <article>Item</article>
+                  <article>Item</article>
+                  <article>Item</article>
+                  <article>Item</article>
+                  <article>Item</article>
+                  <article>Item</article>
+                </div>
+              </article>
+            </div>
+          </article>
+          <article>Item</article>
+          <article>Item</article>
+          <article>Item</article>
+        </div>
+      </section>
+
+      <section data-accordion>
+        <button data-control>Accordion 2</button>
+        <div data-content>
+          <article>Item</article>
+          <article>Item</article>
+          <article>Item</article>
+          <article>Item</article>
+          <article>Item</article>
+          <article>Item</article>
+        </div>
+      </section>
+    </section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//rawgit.com/vctrfrnndz/jquery-accordion/master/js/jquery.accordion.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#only-one [data-accordion]').accordion();
+
+        $('#multiple [data-accordion]').accordion({
+          singleOpen: false
+        });
+
+        $('#single[data-accordion]').accordion({
+          transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
+          transitionSpeed: 200
+        });
+      });
+    </script>
+  </body>
+</html>
