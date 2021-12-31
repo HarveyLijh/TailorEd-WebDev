@@ -131,7 +131,6 @@
                     </p>
                 </div>
             </div>
-
             <!-- About -->
             <div id="about" name="about" class="linked-section section-grey">
                 <div class="container">
@@ -307,6 +306,7 @@ For frequently-asked questions about the study, see our
                     <div class="row margin-bottom-10">
                         <div class="col-md-12">
                             <h1 class="section-header-h1">Frequently Asked Questions</h1>
+                            
                             <!-- general questions -->
                             <div class="container-question general-faqs">
                                 <button class="accordion accordion-btn">
@@ -526,6 +526,42 @@ For frequently-asked questions about the study, see our
                         </div>
                     </div>
                 </div>
+                <section id="only-one" data-accordion-group>
+                    <div data-accordion>
+                        <button data-control>Accordion 1</button>
+                        <div data-content>
+                            <article data-accordion>
+                                <button data-control>2nd Level</button>
+                                <div data-content>
+                                    <article>Item</article>
+                                </div>
+                            </article>
+                            <article data-accordion>
+                                <button data-control>2nd Level</button>
+                                <div data-content>
+                                    <article>Item</article>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div data-accordion>
+                        <button data-control>Accordion 2</button>
+                        <div data-content>
+                            <article data-accordion>
+                                <button data-control>2nd Level</button>
+                                <div data-content>
+                                    <article>Item</article>
+                                </div>
+                            </article>
+                            <article data-accordion>
+                                <button data-control>2nd Level</button>
+                                <div data-content>
+                                    <article>Item</article>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
             </div>
             <!-- contact -->
             <div id="contact" name="contact" class="linked-section section-grey">
@@ -541,14 +577,36 @@ For frequently-asked questions about the study, see our
                                 <form id="contact-form">
                                     <div class="user-info">
                                         <input type="hidden" name="contact_number">
-                                        <input class="name" type="text" name="from_name" placeholder="Enter name" required>
-                                        <input class="email" type="email" name="user_email" placeholder="Enter email address" required>
+                                        <input
+                                            class="name"
+                                            type="text"
+                                            name="from_name"
+                                            placeholder="Enter name"
+                                            required
+                                        >
+                                        <input
+                                            class="email"
+                                            type="email"
+                                            name="user_email"
+                                            placeholder="Enter email address"
+                                            required
+                                        >
                                     </div>
                                     <div class="user-message">
-                                        <textarea class="text" name="message" placeholder="Enter message" required></textarea>
+                                        <textarea
+                                            class="text"
+                                            name="message"
+                                            placeholder="Enter message"
+                                            required
+                                        ></textarea>
                                     </div>
                                     <div class="submit-form">
-                                        <input href="#home" class="btn-submit" type="submit" value="Send">
+                                        <input
+                                            href="#home"
+                                            class="btn-submit"
+                                            type="submit"
+                                            value="Send"
+                                        >
                                     </div>
                                 </form>
                             </div>
@@ -590,7 +648,11 @@ For frequently-asked questions about the study, see our
                             </p>
                             <p class="lead">
                                 Lastly, if you have questions about your rights as a participant in this study, or if you feel you have been placed at risk, contact the Chair of SCU's Human Subjects Committee through the Office of Research Compliance and Integrity at
-                                <u><b><a href="tel:408-554-5591">408-554-5591</a></b></u>
+                                <u>
+                                    <b>
+                                        <a href="tel:408-554-5591">408-554-5591</a>
+                                    </b>
+                                </u>
                                 .
                             </p>
                         </div>
@@ -613,8 +675,22 @@ For frequently-asked questions about the study, see our
                     </div>
                 </div>
             </main>
-            <script src="assets/js/jquery-3.1.1.min.js"></script>
-            <script src="assets/js/jquery-ui-effects.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script type="text/javascript" src="//rawgit.com/vctrfrnndz/jquery-accordion/master/js/jquery.accordion.js"></script>
+            <script type="text/javascript">
+              $(document).ready(function() {
+                $('#only-one [data-accordion]').accordion();
+        
+                $('#multiple [data-accordion]').accordion({
+                  singleOpen: false
+                });
+        
+                $('#single[data-accordion]').accordion({
+                  transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
+                  transitionSpeed: 200
+                });
+              });
+            </script>
             <script src="assets/js/bootstrap.min.js"></script>
             <script src="assets/js/init.js"></script>
             <script src="assets/js/slideout.min.js"></script>
