@@ -12,6 +12,8 @@ window.onload = function() {
         emailjs.sendForm('contact_service', 'contact_tailorEd_mhg9gkn', this)
             .then(function() {
                 console.log('SUCCESS!');
+                let form = document.getElementById('contact-form');
+                form.reset();
             }, function(error) {
                 console.log('FAILED...', error);
             });
